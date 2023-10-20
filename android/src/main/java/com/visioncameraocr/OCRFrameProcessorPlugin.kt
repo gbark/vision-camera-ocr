@@ -14,9 +14,9 @@ import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 
 import com.mrousavy.camera.frameprocessor.Frame
 import com.mrousavy.camera.frameprocessor.FrameProcessorPlugin
-import com.mrousavy.camera.parsers.Orientation
+import com.mrousavy.camera.types.Orientation
 
-class OCRFrameProcessorPlugin: FrameProcessorPlugin() {
+class OCRFrameProcessorPlugin(options: MutableMap<String, Any>?) : FrameProcessorPlugin(options) {
 
     private fun getBlockArray(blocks: MutableList<Text.TextBlock>): List<HashMap<String, Any?>> {
         val blockArray = mutableListOf<HashMap<String, Any?>>()

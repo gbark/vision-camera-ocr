@@ -10,8 +10,8 @@ import com.mrousavy.camera.frameprocessor.FrameProcessorPluginRegistry;
 
 class VisionCameraOcrPackage : ReactPackage {
     override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-        FrameProcessorPluginRegistry.addFrameProcessorPlugin("scanOCR") {
-            OCRFrameProcessorPlugin()
+        FrameProcessorPluginRegistry.addFrameProcessorPlugin("scanOCR") { options ->
+            OCRFrameProcessorPlugin(options)
         }
         return emptyList()
     }
